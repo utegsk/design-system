@@ -31,7 +31,7 @@ ComboboxOption.defaultProps = {
 };
 
 ComboboxOption.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]).isRequired,
   isSelected: PropTypes.bool,
 };
 
