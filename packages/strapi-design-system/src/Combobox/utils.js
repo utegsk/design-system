@@ -35,7 +35,7 @@ export function filterOptions(options = [], filter = null, exclude = []) {
 
   return equalizedTerm
     ? options.filter((option) => {
-        const equalizedOptionChildren = option.props.children.toString().toLowerCase();
+        const equalizedOptionChildren = option.props.filterLabel || option.props.children.toString().toLowerCase();
         const matches = equalizedOptionChildren.includes(equalizedTerm);
 
         return matches && exclude.indexOf(option) < 0;
