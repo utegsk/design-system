@@ -22,7 +22,7 @@ r.defaultProps = {
   isSelected: !1
 };
 r.propTypes = {
-  children: o.oneOfType([o.string, o.number]).isRequired,
+  children: o.oneOfType([o.string, o.number, o.object]).isRequired,
   isSelected: o.bool
 };
 r.displayName = "ComboboxOption";

@@ -23,11 +23,11 @@ const t = {
   Select: "Select",
   UpLevel: "UpLevel"
 };
-function d(e = [], n = null, i = []) {
+function C(e = [], n = null, i = []) {
   const o = String(n ?? "").toLowerCase();
-  return o ? e.filter((s) => (s.props.filterLabel || s.props.children.toString().toLowerCase()).includes(o) && i.indexOf(s) < 0) : e;
+  return o ? e.filter((s) => (s.props.filterLabel?.toLowerCase() || s.props.children.toString().toLowerCase()).includes(o) && i.indexOf(s) < 0) : e;
 }
-function C(e, n) {
+function d(e, n) {
   if (!n && e === r.DOWN)
     return t.Open;
   if (e === r.DOWN)
@@ -71,8 +71,8 @@ function L(e) {
 export {
   t as MenuActions,
   f as TreeActions,
-  d as filterOptions,
-  C as getActionFromKey,
+  C as filterOptions,
+  d as getActionFromKey,
   S as getUpdatedIndex,
   L as maintainScrollVisibility
 };
